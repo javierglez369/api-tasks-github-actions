@@ -22,7 +22,7 @@ public class TasksController : ControllerBase
     [HttpGet("{id}")]
     public IActionResult GetById(int id)
     {
-        var task = _repo.GetById(id);
+        var task = _repo.GetById(id);        
         return task is null ? NotFound() : Ok(task);
     }
 
